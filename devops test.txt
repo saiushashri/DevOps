@@ -1,4 +1,4 @@
-Action plan: Installing ruby on rails and with integrating apache with phusion passenger
+﻿Action plan: Installing ruby on rails and with integrating apache with phusion passenger
 webserver, we can deploy the ruby app. We can set autoscaling in the AWS server so that the
 load can be balanced. The installation and configuration can be automated using chef cookbook.
 
@@ -125,5 +125,5 @@ Knife cookbook upload apache2
 Knife cookbook upload passenger.
 Now, we have all the cookbooks in a runlist. When ever we need to spin an another server using
 these packages, we can just bootstrap the node by using the IP address.
-Knife bootstrap 10.0.2.15 --ssh-user manoj --ssh-password --sudo --use-sudo-password --node -
+Knife bootstrap 10.0.2.15 --ssh-user sai --ssh-password --sudo --use-sudo-password --node -
 name node1 --runlist ‘recipe[ruby_install, apache2, passenger
